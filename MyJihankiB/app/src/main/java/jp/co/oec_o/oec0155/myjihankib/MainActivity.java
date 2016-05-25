@@ -1,5 +1,6 @@
 package jp.co.oec_o.oec0155.myjihankib;
 
+import android.content.ClipData;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnTouch;
 
 public class MainActivity extends AppCompatActivity implements View.OnDragListener {
 
@@ -61,9 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
     //商品3の価格を入れる変数
     int kakaku3kingaku;
     //お金を入れた時の音
-     MediaPlayer sound1;
+    MediaPlayer sound1;
     //商品が出るときの音
-     MediaPlayer sound2;
+    MediaPlayer sound2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,8 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
         kakaku1kingaku = Integer.parseInt(kakaku1.getText().toString());
         kakaku2kingaku = Integer.parseInt(kakaku2.getText().toString());
         kakaku3kingaku = Integer.parseInt(kakaku3.getText().toString());
-        sound1 = MediaPlayer.create(this,R.raw.hyun1);
-        sound2 = MediaPlayer.create(this,R.raw.touch1);
+        sound1 = MediaPlayer.create(this, R.raw.hyun1);
+        sound2 = MediaPlayer.create(this, R.raw.touch1);
     }
 
     private void buttonAllOff() {
@@ -91,8 +94,72 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
         button3.setBackgroundColor(Color.GRAY);
     }
 
+    @OnTouch(R.id.okane10000)
+    public boolean touchokane10000(ImageView img) {
+        ClipData clipData = ClipData.newPlainText("okane", "10000");
+        img.startDrag(clipData, new View.DragShadowBuilder(img), (Object) img, 0);
+        return true;
+    }
+
+    @OnTouch(R.id.okane100)
+    public boolean touchokane100(ImageView img) {
+        ClipData clipData = ClipData.newPlainText("okane", "100");
+        img.startDrag(clipData, new View.DragShadowBuilder(img), (Object) img, 0);
+        return true;
+    }
+
+    @OnTouch(R.id.okane500)
+    public boolean touchokane500(ImageView img) {
+        ClipData clipData = ClipData.newPlainText("okane", "500");
+        img.startDrag(clipData, new View.DragShadowBuilder(img), (Object) img, 0);
+        return true;
+    }
+
     @Override
     public boolean onDrag(View v, DragEvent event) {
-        return false;
+        // 硬貨をドロップした時の処理
+        // ドロップした時
+        if (event.getAction() == DragEvent.ACTION_DROP) {
+            // ドロップした先が投入口だったら
+            if (v == tounyuuguchi) {
+                // クリップデータを取り出して、投入金額変数に数字に変換してセットする
+                ClipData clipData = event.getClipData();
+                ClipData.Item item = clipData.getItemAt(0);
+                tounyuukinngaku = Integer.parseInt((String) item.getText());
+                tonyuSyori();
+            }
+        }
+        return true;
+    }
+
+    private void tonyuSyori() {
+        goukeikingaku = goukeikingaku + tounyuukinngaku;
+        goukeihyouji.setText(String.valueOf(goukeikingaku));
+        if (goukeikingaku >= kakaku1kingaku) {
+            button1On();
+        }
+        if (goukeikingaku >= kakaku2kingaku) {
+            button2On();
+        }
+        if (goukeikingaku >= kakaku3kingaku) {
+            button3On();
+        }
+    }
+
+
+    private void button1On() {
+        button1.setEnabled(true);
+        button1.setBackgroundColor(Color.MAGENTA);
+    }
+
+    private void button2On() {
+        button2.setEnabled(true);
+        button2.setBackgroundColor(Color.MAGENTA);
+    }
+
+    private void button3On() {
+        button3.setEnabled(true);
+        button3.setBackgroundColor(Color.MAGENTA);
+
     }
 }
