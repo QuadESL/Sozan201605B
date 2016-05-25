@@ -73,7 +73,7 @@
                     android:layout_height="0dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="50000"
-                    android:id="@+id/nedan1"
+                    android:id="@+id/kakaku1"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:background="@android:color/black"
@@ -107,7 +107,7 @@
                     android:layout_height="0dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="20000"
-                    android:id="@+id/nedan2"
+                    android:id="@+id/kakaku2"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:background="@android:color/black"
@@ -142,7 +142,7 @@
                     android:layout_height="0dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="900"
-                    android:id="@+id/nedan3"
+                    android:id="@+id/kakaku3"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@android:color/holo_green_light"
@@ -195,7 +195,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:id="@+id/foukeihyouji2"
+                        android:id="@+id/goukeihyouji"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:background="@android:color/black"
@@ -218,7 +218,7 @@
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="取り出し口"
-                        android:id="@+id/toridasiguchi"
+                        android:id="@+id/toridasiguchi1"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -230,11 +230,11 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:id="@+id/toridaoiguchi"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="3"
                         android:background="@android:color/black"
-                        android:layout_marginRight="5dp" />
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/toridasiguchi" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -257,7 +257,7 @@
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="お金投入口"
-                        android:id="@+id/tounyuuguchi"
+                        android:id="@+id/tounyuuguchi1"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -268,7 +268,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:id="@+id/goukeihyuji1"
+                        android:id="@+id/tounyuuguchi"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="3"
                         android:background="@android:color/black"
@@ -300,7 +300,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:id="@+id/oturihyouji2"
+                        android:id="@+id/oturihyouji"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:background="@android:color/black"
@@ -313,9 +313,4 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView5"
-        android:layout_gravity="right" />
 </LinearLayout>
