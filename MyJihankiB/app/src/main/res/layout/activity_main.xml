@@ -14,50 +14,154 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/okane10000"
+            android:src="@drawable/sihei10000"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/okane500"
+            android:src="@drawable/s_500endama"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/okane100"
+            android:src="@drawable/s_100endama"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="8">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="3">
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_weight="1"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/syasin1"
+                    android:src="@drawable/sumaho1"
+                    android:layout_weight="6" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="50000"
+                    android:id="@+id/nedan1"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@android:color/black"
+                    android:textColor="@android:color/holo_green_light" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="スマホ"
+                    android:id="@+id/button1"
+                    android:layout_weight="3"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_weight="1"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/syasin2"
+                    android:layout_weight="6"
+                    android:src="@drawable/kani1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="20000"
+                    android:id="@+id/nedan2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@android:color/black"
+                    android:textColor="@android:color/holo_green_light" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="カニ"
+                    android:id="@+id/button2"
+                    android:layout_weight="3"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_weight="1"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/syasin3"
+                    android:layout_weight="6"
+                    android:src="@drawable/umakabo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="900"
+                    android:id="@+id/nedan3"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_green_light"
+                    android:background="@android:color/black" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="うまい棒"
+                    android:id="@+id/button3"
+                    android:layout_weight="3"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="5">
 
@@ -65,19 +169,153 @@
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
                 android:layout_weight="1">
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="合計金額"
+                        android:id="@+id/goukeihyouji1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@android:color/holo_orange_light"
+                        android:textColor="@android:color/black"
+                        android:layout_marginRight="5dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/foukeihyouji2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/black"
+                        android:gravity="center_vertical|end"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@android:color/holo_green_light"
+                        android:layout_marginBottom="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="取り出し口"
+                        android:id="@+id/toridasiguchi"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@android:color/holo_blue_bright"
+                        android:textColor="@android:color/black"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/toridaoiguchi"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:background="@android:color/black"
+                        android:layout_marginRight="5dp" />
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
                 android:layout_weight="1">
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="お金投入口"
+                        android:id="@+id/tounyuuguchi"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/holo_blue_bright"
+                        android:layout_marginLeft="5dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/goukeihyuji1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:background="@android:color/black"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="おつり"
+                        android:id="@+id/oturihyouji1"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:autoText="false"
+                        android:background="@android:color/holo_orange_light"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="6dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/oturihyouji2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@android:color/black"
+                        android:gravity="center_vertical|end"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@android:color/holo_green_light" />
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:layout_gravity="right" />
 </LinearLayout>
