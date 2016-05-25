@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.OnTouch;
 
 public class MainActivity extends AppCompatActivity implements View.OnDragListener {
@@ -66,6 +67,14 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
     MediaPlayer sound1;
     //商品が出るときの音
     MediaPlayer sound2;
+    @BindView(R.id.goukeihyouji1)
+    TextView goukeihyouji1;
+    @BindView(R.id.toridasiguchi1)
+    TextView toridasiguchi1;
+    @BindView(R.id.tounyuuguchi1)
+    TextView tounyuuguchi1;
+    @BindView(R.id.oturihyouji1)
+    TextView oturihyouji1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,5 +170,29 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
         button3.setEnabled(true);
         button3.setBackgroundColor(Color.MAGENTA);
 
+    }
+
+    @OnClick(R.id.button1)
+    public void onClick1() {
+        oturikingaku=goukeikingaku - kakaku1kingaku;
+        toridasiguchi.setImageDrawable(syasin1.getDrawable());
+        oturihyouji.setText(String.valueOf(oturikingaku));
+        buttonAllOff();
+    }
+
+    @OnClick(R.id.button2)
+    public void onClick2() {
+        oturikingaku = goukeikingaku - kakaku2kingaku;
+        toridasiguchi.setImageDrawable(syasin2.getDrawable());
+        oturihyouji.setText(String.valueOf(oturikingaku));
+        buttonAllOff();
+    }
+
+    @OnClick(R.id.button3)
+    public void onClick3() {
+        oturikingaku = goukeikingaku =kakaku2kingaku;
+        toridasiguchi.setImageDrawable(syasin3.getDrawable());
+        oturihyouji.setText(String.valueOf(oturikingaku));
+        buttonAllOff();
     }
 }
