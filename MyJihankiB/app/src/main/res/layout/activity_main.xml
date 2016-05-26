@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:id="@+id/syasin1"
-                    android:src="@drawable/sumaho1"
+                    android:src="@drawable/sumaho2"
                     android:layout_weight="6" />
 
                 <TextView
@@ -182,7 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_weight="2">
+                    android:layout_weight="1">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -215,7 +215,7 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="3">
 
@@ -236,7 +236,6 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_gravity="center_horizontal"
                         android:layout_weight="3"
                         android:background="@android:color/black"
                         android:layout_marginRight="5dp"
@@ -255,8 +254,7 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="3">
+                    android:layout_weight="1.7">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -286,7 +284,7 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2">
+                    android:layout_weight="1">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -307,7 +305,6 @@
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:id="@+id/oturihyouji"
-                        android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:background="@android:color/black"
                         android:gravity="center_vertical|end"

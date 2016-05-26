@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
                 tounyuukinngaku = Integer.parseInt((String) item.getText());
                 tonyuSyori();
             }
+            sound1.start();
         }
         return true;
     }
@@ -174,10 +175,11 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
 
     @OnClick(R.id.button1)
     public void onClick1() {
-        oturikingaku=goukeikingaku - kakaku1kingaku;
+        oturikingaku = goukeikingaku - kakaku1kingaku;
         toridasiguchi.setImageDrawable(syasin1.getDrawable());
         oturihyouji.setText(String.valueOf(oturikingaku));
         buttonAllOff();
+        sound2.start();
     }
 
     @OnClick(R.id.button2)
@@ -186,13 +188,26 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
         toridasiguchi.setImageDrawable(syasin2.getDrawable());
         oturihyouji.setText(String.valueOf(oturikingaku));
         buttonAllOff();
+        sound2.start();
     }
 
     @OnClick(R.id.button3)
     public void onClick3() {
-        oturikingaku = goukeikingaku =kakaku2kingaku;
+        oturikingaku = goukeikingaku - kakaku3kingaku;
         toridasiguchi.setImageDrawable(syasin3.getDrawable());
         oturihyouji.setText(String.valueOf(oturikingaku));
         buttonAllOff();
+        sound2.start();
+    }
+
+    @OnClick(R.id.toridasiguchi)
+    public void onClick() {
+        if (toridasiguchi.getDrawable() != null) {
+            toridasiguchi.setImageDrawable(null);
+            goukeikingaku = 0;
+            goukeihyouji.setText("");
+            oturikingaku = 0;
+            oturihyouji.setText("");
+        }
     }
 }
